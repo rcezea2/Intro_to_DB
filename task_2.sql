@@ -1,4 +1,9 @@
 USE alx_book_store;
+CREATE TABLE alx_book_store.Authors (
+    author_id INT PRIMARY KEY,
+    author_name VARCHAR(215)
+);
+
 CREATE TABLE alx_book_store.Books (
     book_id INT PRIMARY KEY,
     title VARCHAR(130),
@@ -8,19 +13,15 @@ CREATE TABLE alx_book_store.Books (
     FOREIGN KEY (author_id) REFERENCES Authors (author_id)
 );
 
-CREATE TABLE Authors (
-    author_id INT PRIMARY KEY,
-    author_name VARCHAR(215)
-);
 
-CREATE TABLE Customers (
+CREATE TABLE alx_book_store.Customers (
     customer_id INT PRIMARY KEY,
     customer_name VARCHAR(215),
     email VARCHAR(215),
     address TEXT
 );
 
-CREATE TABLE IF NOT EXISTS Orders (
+CREATE TABLE IF NOT EXISTS alx_book_store.Orders (
     order_id INT PRIMARY KEY,
     customer_id INT,
     order_date DATE,
