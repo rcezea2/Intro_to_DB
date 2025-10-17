@@ -1,6 +1,10 @@
 -- 4. Full description
 SELECT
-    *
+    COLUMN_NAME,
+    DATA_TYPE,
+    IS_NULLABLE,
+    COLUMN_TYPE,
+    COLUMN_KEY
 FROM
     INFORMATION_SCHEMA.COLUMNS
 WHERE
