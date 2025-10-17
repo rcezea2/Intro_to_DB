@@ -11,7 +11,7 @@ try:
         password="toorroot",
         database="alx_book_store"
     )
-except Exception as e:
+except mysql.connector.Error as e:
     print(f"Failed to Connect to DB: {e}")
 
 if mydb:
